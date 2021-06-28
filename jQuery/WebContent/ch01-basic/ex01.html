@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style type="text/css">
+#navigation{
+cursor:pointer;
+}
+#navigation li{
+
+	list-style:none;
+	float:left;
+	padding:5px;
+	
+}
+
+#navigation .selected{
+background-color:red;
+color:white;
+}
+</style>
+<script type="text/javascript">
+function addEvent(target, eventType,eventHandler,useCapture){
+	target.addEventListener(eventType,eventHandler,useCapture? useCapture:false)
+}
+
+function clickHandler(){
+	var nav = document.getElementById('navigation');
+	
+	for(var i=0;i<nav.childNodes.length;i++){
+		var child = nav.childNodes[i]
+		
+		if(child.nodeType==3){
+			continue;
+		}
+		child.className='';
+	}
+	event.target.className='selected';	
+	
+}
+addEvent(window,'load',function(){
+	var nav = document.getElementById('navigation');
+	
+	for(var i=0;i<nav.childNodes.length;i++){
+		
+		var child = nav.childNodes[i];
+		
+		if(child.nodeType==3){
+			continue;
+		}
+		addEvent(child,'click',clickHandler);
+		
+	}
+});
+
+</script>
+</head>
+<body>
+<ul id ="navigation">
+	<li>HTML</li>
+	<li>CSS</li>
+	<li>JavaScript</li>
+	<li class="selected">jQuery</li>
+	<li>JSP</li>
+	<li>PHP</li>
+	<li>ASP</li>
+</ul>
+
+</body>
+</html>
