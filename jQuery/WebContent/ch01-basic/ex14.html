@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript" src="./js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('body>div').css('border','5px solid orange')	//자식 선택자
+	
+	$('body div').css('border','5px solid orange')	//후손 선택자
+})
+</script>
+</head>
+<body>
+	<div>
+		<ul>
+			<li>사과</li>
+			<li>포도</li>
+			<li>자두</li>
+			<li>파인애플</li>
+			<li>앵두</li>
+			<li>딸기</li>
+			<li>바나나</li>
+		</ul>
+		<div>스포츠</div>
+	</div>
+	<p>
+		<span>계절</span>
+	</p>
+</body>
+</html>
