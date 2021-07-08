@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript" src="./js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('input[name~=한국]').css('background','yellow');
+	
+	$('div[id^=content-]').css('background','orange');
+	
+	$('input[id*=한국]').css('background','gray')
+	
+});
+</script>
+</head>
+<body>
+	<input name='한국' value="한국"><br>
+	<input name='한국인' value='한국인'><br>
+	<input name='한국 인' value='한국 인'><br>
+	<input name='대 한국 인' value='대 한국 인'><br>
+	
+	<br><br>
+	<div id='content-1'>DIV content-1</div>
+	<div id='content-2'>DIV content-2</div>
+	
+	<br><br>
+	<input id='한국' value='한국'><br>
+	<input id='한 국인' value='한 국인'><br>
+	<input id='한국 인' value='한국 인'><br>
+	<input id='대한국민' value='대한국민'><br>
+	
+
+
+</body>
+</html>
