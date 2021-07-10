@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript" src="./js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('button').on('click',function(){
+			$(':checked').next().text('세계에서 살기 좋은 도시입니다.');
+			
+		});
+		
+		
+		
+	})
+
+</script>
+</head>
+<body>
+<form>
+	<input type='checkbox' name='city' value='1001'>
+	<span>오스트리아 빈</span><br>
+	<input type='checkbox' name='city' value='1002'>
+	<span>스위스 취리히</span><br>
+	<input type='checkbox' name='city' value='1003'>
+	<span>뉴질랜드 오클랜드</span><br>
+	<input type='checkbox' name='city' value='1004' checked>
+	<span>독일 뮌헨</span><br>
+	<input type='checkbox' name='city' value='1005'>
+	<span>캐나다 벤쿠버</span><br>
+	
+</form>
+<br>
+
+<button>마음에 드는 곳을 선택해 주세요</button>
+</body>
+</html>
