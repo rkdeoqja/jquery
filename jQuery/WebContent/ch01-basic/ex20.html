@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript" src="./js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+$(function(){
+	
+	$('input:checked').attr('checked',false);
+	
+	$('input:disabled').attr('disabled',false)
+})
+
+</script>
+</head>
+<body>
+	<input type='checkbox' name='city' value='서울' checked>서울
+	<input type='button' value='확인' disabled>
+</body>
+</html>
