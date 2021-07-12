@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript" src="./js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('tr:eq(0)').css('background','#000000').css('color','white');
+	$('td:nth-child(3n+1)').css('background','gold');
+	$('td:nth-child(3n+2)').css('background','green');
+	$('td:nth-child(3n)').css('background','pink');
+	
+	
+	
+})
+
+</script>
+</head>
+<body>
+<table>
+		<tr>
+			<th>이름</th><th>혈액형</th><th>출생지</th>
+		</tr>
+		<tr>
+			<td>홍길동</td><td>A</td><td>포항</td>
+		</tr>
+		<tr>
+			<td>김길동</td><td>AB</td><td>원주</td>
+		</tr>
+		<tr>
+			<td>일지매</td><td>O</td><td>부산</td>
+		</tr>
+		<tr>
+			<td>금잔디</td><td>B</td><td>뉴욕</td>
+		</tr>
+		<tr>
+			<td>장금이</td><td>A</td><td>제주</td>
+		</tr>
+		<tr>
+			<td>이순신</td><td>AB</td><td>강릉</td>
+		</tr>
+	</table>
+</body>
+</html>
