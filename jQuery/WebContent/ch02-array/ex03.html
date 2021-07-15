@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		var array=[
+			{name:'google',link:'http//www.google.com'},
+			{name:'daum',link:'http//www.daum.net'},
+			{name:'naver',link:'http//www.naver.com'},
+			{name:'jQuery',link:'http//www.jQuery.com'}
+		];
+		
+		$.each(array,function(index,item){
+			var output='';
+			output+='<a href="'+item.link+'">';
+			output+='<h1>'+item.name+'</h1>';
+			output+='</a>';
+			
+			document.body.innerHTML += output;
+		});
+		
+		
+		
+	});
+</script>
+</head>
+<body>
+	
+</body>
+</html>
