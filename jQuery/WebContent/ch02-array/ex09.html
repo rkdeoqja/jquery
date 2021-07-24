@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style type="text/css">
+.result{
+	font-weight:bold;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		function elemArr(arr){
+			var arrObj =[];
+			for(var i=0;i<arr.length;i++){
+				arrObj.push(arr[i].innerHTML);
+			}
+			return arrObj;
+		}
+		
+		var shape =$('.shape').toArray();
+		var car =$('.car li').toArray();
+		
+		console.log(shape);
+		console.log(car);
+		
+		console.log(elemArr(shape));
+		console.log(elemArr(car));
+		
+		$('button').on('click',function(){
+			if($(this).hasClass('result_shape')){
+				$('.result:first').text(elemArr(shape).join(" / "));
+			}else if($(this).hasClass('result_car')){
+				$('.result:last').text(elemArr(car).join(" / "));
+			}
+		})
+		
+	})
+</script>
+</head>
+<body>
+	<div class='shape'>사각형</div>
+	<div class='shape'>삼각형</div>
+	<div class='shape'>원</div>
+	<div class='shape'>도형</div>
+	
+	<br>
+	<ul class='car'>
+		<li>포르쉐</li>
+		<li>페라리</li>
+		<li>벤츠</li>
+		<li>아우디</li>
+		<li>람보르기니</li>
+		
+	</ul>
+	
+	<br>
+	<button type='button' class='result_shape'>결과보기(모양)</button>
+	<div class='result'></div>
+	<br>
+	<button type='button' class='result_car'>결과보기(자동차)</button>
+	<div class='result'></div>
+</body>
+</html>
