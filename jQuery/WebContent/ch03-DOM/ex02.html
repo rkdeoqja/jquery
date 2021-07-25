@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style type="text/css">
+.container *{
+	display:block;
+	border:1px solid lightgray;
+	padding:5px;
+	margin:15px;
+}
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('button').on('click',function(){
+		$('p').parentsUntil('div').css({
+			'border':'2px solid red'
+		})
+	})	
+
+});
+</script>
+</head>
+<body>
+	<button>p요소의 부모 요소</button>
+	
+	<div class='container'>div요소
+		<div>div요소
+			<ul>ul요소
+				<li>li 요소</li>
+				<li>li 요소
+					<p id='target'>p 요소
+						<span>span 요소</span>
+					</p>
+				</li>
+				<li>li요소</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
