@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<style type="text/css">
+.container *{
+	display:block;
+	border:1px solid lightgray;
+	padding:5px;
+	margin:15px;
+}
+
+</style>
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('#parents').on('click',function(){
+		$('#origin').parents('div').css({
+			"border":"2px solid red"
+		});	
+	});
+	
+	$('#closest').on('click',function(){
+		$('#origin').closest('li').css({
+			"border":"2px solid green"
+		})
+	});
+	
+});
+</script>
+</head>
+<body>
+	<button id='parents'>parents</button>
+	<button id='closest'>closest</button>
+	<div class='container'>div요소
+		<div>div요소
+			<ul>ul요소
+				<li>li 요소</li>
+				<li>li 요소
+					<p id='origin'>p 요소
+						<span>span 요소</span>
+					</p>
+				</li>
+				<li>li요소</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
