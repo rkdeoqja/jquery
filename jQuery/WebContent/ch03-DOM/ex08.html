@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<style type="text/css">
+.container *{
+	display:block;
+	border:1px solid lightgray;
+	padding:5px;
+	margin:15px;
+}
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('button').on('click',function(){
+		$('h4').nextAll().css({
+			'border':'2px solid red'
+		})	
+	});
+});
+
+</script>
+<title>Insert title here</title>
+</head>
+<body>
+	<button>h4요소의 다음 형제 요소</button>
+	<div class='container'>
+		<div>div 요소</div>
+		<h1>h1 요소</h1>
+		<h2>h2 요소</h2>
+		<h3>h3 요소</h3>
+		<h4>h4 요소</h4>
+		<h5>h5 요소</h5>
+		<h6>h6 요소</h6>
+		<p>p 요소</p>
+	</div>
+</body>
+</html>
