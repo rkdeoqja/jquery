@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style type="text/css">
+.container *{
+	display:block;
+	border:1px solid lightgray;
+	padding:5px;
+	margin:15px;
+}
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('button').on('click',function(){
+			$('#divBox').find("p")
+// 			.end()
+			.css("border","2px solid red");
+			
+		})
+	})
+
+</script>
+</head>
+<body>
+	<button>div 요소 선택</button>
+	<div class='container'>
+		<div id='divBox'>div 요소
+			<p>p 요소</p>
+		</div>
+	</div>	
+</body>
+</html>
