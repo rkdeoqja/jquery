@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('button').on('click',function(){
+		$('iframe').contents().find('a').css({
+			"backgroundColor":'red'
+		});
+	});
+});
+</script>
+</head>
+<body>
+	<button>a요소의 배경색 변경</button>
+	<br><br>
+	<iframe src="ex12.html" style="width:95%; height:400px;"></iframe>
+</body>
+</html>
