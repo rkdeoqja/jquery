@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<style type="text/css">
+.container *{
+	display:block;
+	border:1px solid lightgray;
+	padding:5px;
+	margin:15px;
+}
+
+</style>
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('button').on('click',function(){
+		$('#target').offsetParent().css("border","2px solid red")	
+	});
+});
+
+</script>
+</head>
+<body>
+	<button>요소의 위치 정보</button>
+	
+	<div class='container'>div요소
+		<div>div 요소
+			<div>div 요소
+				<ul style="position:relative">ul요소
+					<li>li 요소</li>
+					<li>li 요소
+						<p id='target'>p 요소
+							<span>span 요소</span>
+						</p>
+					</li>
+					<li>li요소</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
